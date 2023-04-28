@@ -1,0 +1,29 @@
+{
+  "language" : [
+    "JavaScript", "TypeScript", "GOLANG", "C++"
+  ],
+  "Server": [
+    "Node.js", "Nest.js", "Express.js", "GOLANG", "Serverless Lambda", "Lambda Layer & Proxy"
+  ],
+  "Database": [
+    "MySQL", "PostgresSQL", "MongoDB", "DynamoDB", "AWS RDS", "Redis", "ElasticSearch"
+  ],
+  "Frontend": [
+    "React.js", "Next.js", "MUI", "CSS"
+  ],
+  "Cloud": [
+    "AWS Amplify", "Serverless Lambda", "S3", "AWS code pipline", "AWS Code build", "AWS CDK", "AWS SDK", "Chat GPT"
+  ],
+  "Authentication": [
+    "JWT", "AWS Cognito", "OAUTH2", "Passportjs", "SSO"
+  ],
+  "API": [
+    "Rest API", "GraphQL", "Apollo GraphQL", "Amplify GraphQL"
+  ], 
+  "Vershion Control": [
+    "Git", "Github", "Docker", "Bitbucket", "AWS Code Commit"
+  ]
+}
+
+
+
