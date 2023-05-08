@@ -50,7 +50,7 @@ export default function Contact() {
           <Button onClick={toggleDrawer} class="relative top-9 left-11 w-14 h-14 bg-zinc-700 border border-transparent rounded-full" >
             <MenuIcon fontSize="large" color="action" style={{ color: 'white',padding:'8px' }} />
           </Button> 
-          <div class="mt-16 justify-self-center text-zinc-100 text-6xl font-sans font-extrabold ">
+          <div class="mt-16 justify-self-center text-zinc-100 sm:text-3xl lg:text-5xl font-sans font-extrabold ">
             <p>GET <span class="text-yellow-400">IN TOUCH</span></p>
           </div>
           <Drawer open={isOpen} 
@@ -76,7 +76,7 @@ export default function Contact() {
 
             <div class="grid justify-center font-sans font-medium text-zinc-100 mt-6">I’M ALWAYS OPEN TO DISCUSSING PRODUCT DESIGN WORK OR PARTNERSHIPS.</div>
             
-            <div class="grid grid-cols-3 mt-6 p-16">
+            <div class="grid sm:grid-cols-3 lg:grid-cols-3 mt-6 p-16">
               <div class=" ">
                 <p class="text-gray-100 mt-2 ">Phone</p>
                 <div class="flex flex-row space-x-2 mt-1 ">
@@ -92,8 +92,8 @@ export default function Contact() {
                 </div>
               </div>
               <div class="">
-                <p class="text-gray-100 mt-4">WhatsApp</p>
-                <div class="flex flex-row space-x-2 mt-1">
+                <p class="text-gray-100 mt-4 sm:ml-5 lg:ml-0">WhatsApp</p>
+                <div class="flex flex-row space-x-2 mt-1 sm:ml-5 lg:ml-0">
                   <WhatsAppIcon style={{color:"rgb(250,204,21)"}} />
                   <p class="text-gray-100">01625793437</p>
                 </div>

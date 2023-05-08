@@ -57,7 +57,7 @@ export default function About() {
           <Button onClick={toggleDrawer} class="fixed top-9 left-11 w-14 h-14 bg-zinc-700 border border-transparent rounded-full" >
             <MenuIcon fontSize="large" color="action" style={{ color: 'white',padding:'8px' }} />
           </Button> 
-          <div class="mt-16  justify-self-center text-zinc-100 text-6xl font-sans font-extrabold ">
+          <div class="mt-16  justify-self-center text-zinc-100 sm:text-4xl md:text-5xl lg:text-6xl font-sans font-extrabold ">
             <p>ABOUT <span class="text-yellow-400">ME</span></p>
           </div>
           <Drawer open={isOpen} 
@@ -84,8 +84,8 @@ export default function About() {
             <div class="grid justify-center font-sans font-medium text-zinc-100 mt-6">I LOVE TO CODE</div>
             
 
-            <div class="grid grid-cols-2 place-items-center mt-9">
-                <div class="grid grid-cols-2 border border-transparent border-r-yellow-400 h-64 w-full text-zinc-100" style={{}}>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-2 place-items-center mt-9">
+                <div class="grid sm:grid-cols-1 lg:grid-cols-2 border border-transparent border-r-yellow-400 h-64 w-full text-zinc-100" style={{}}>
                   <div class="ml-10">
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Full Name</p><p> Irfan Uddin</p></div>
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Birthdate</p><p> 19 june 1995</p></div>
@@ -93,7 +93,7 @@ export default function About() {
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Experience</p><p> 7 years</p></div>
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Country</p><p> Bangladesh</p></div>
                   </div>
-                  <div class="">
+                  <div class="sm:ml-10 lg:ml-0">
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Email </p><p> IrfanUddin@gmail.com</p></div>
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Phone</p><p> +8001625166755</p></div>
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>LinkedIn</p><Link color="inherit" href="https://www.linkedin.com/in/irfan-sabbir/"> <LinkedInIcon/></Link></div>
@@ -101,14 +101,14 @@ export default function About() {
                     {/* <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Country</p><p> Bangladesh</p></div> */}
                   </div>
                 </div>
-                <img src={image} class="h-80 w-80 rounded-full shadow-md shadow-yellow-400 mr-40" />
+                <img src={image} class="sm:h-40 sm:w-40 lg:h-80 lg:w-80 rounded-full shadow-md shadow-yellow-400 sm:mr-5 lg:mr-40" />
                 {/* <div></div> */}
                 {/* <p class="border-4 border-yellow-400 h-10">hshash</p> */}
             </div>
 
 
-            <div class="grid grid-cols-2 border border-transparent border-t-zinc-300 mt-24 ml-24 mr-24">
-              <div class="ml-6 mb-8">
+            <div class="grid grid-cols-2 border border-transparent border-t-zinc-300 sm:mt-60 lg:mt-24 ml-24 mr-24">
+              <div class="lg:ml-6 mb-8">
                 <Typography variant='h6' style={{color:"white" ,marginTop:"20px"}}>
                   EXPERIENCE
                 </Typography>
@@ -165,14 +165,14 @@ export default function About() {
                 <Typography variant="h6" style={{color:"white",marginTop:"20px"}}>
                   SKILLS
                 </Typography>
-                <div class="grid grid-cols-3 ml-10 text-zinc-50">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 sm:ml-10 lg:ml-10 text-zinc-50">
                 {
                   Object.keys(Obj).map(key =>{
                     {/* console.log(key) */}
                     return(
                       <div>
                         {/* <p color='green'style={{ fontWeight: "bold", fontSize: "20px" }}>{key}</p> */}
-                        <Typography variant="h6"class="border border-yellow-400  rounded-full w-44 flex justify-center py-2 px-1" style={{color:"white",marginTop:"20px"}}>
+                        <Typography variant="h6"class="border border-yellow-400  rounded-full sm:w-36 sm:text-base lg:w-44 flex justify-center sm:py-3 sm:px-2 lg:py-2 lg:px-1" style={{color:"white",marginTop:"20px"}}>
                           {key}
                         </Typography>
                         {
@@ -188,32 +188,7 @@ export default function About() {
                   })
                 }
                 </div>
-                {/* <div class="grid grid-cols-2 ml-10 text-zinc-50">
-                  <div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9 "><PsychologyIcon style={{color:"yellow"}} /><p>Nest JS</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon/><p>TypeORM</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon style={{color:"yellow"}}/><p>MySQL</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon /><p>AWS COdeCommit</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon style={{color:"yellow"}}/><p>Amazon Cognito</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon/><p>AWS Cloud Formation</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon style={{color:"yellow"}}/><p>AWS CDK</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon/><p>Serverless Framework</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon style={{color:"yellow"}}/><p>Amazon WEB Services (AWS)</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon/><p>Node JS</p></div>
-                  </div>
-                  <div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9 "><PsychologyIcon style={{color:"yellow"}} /><p>React JS</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon/><p>Apollo GraphQL</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon style={{color:"yellow"}}/><p>Wev Design</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon /><p>Web Development</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon style={{color:"yellow"}}/><p>Redux JS</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon/><p>MongoDB</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon style={{color:"yellow"}}/><p>Mongoose ODM</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon/><p>Next JS</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon style={{color:"yellow"}}/><p>Sequelize.js</p></div>
-                      <div class="flex flex-row text-md space-x-5 mt-4 px-9"><PsychologyIcon/><p>Rest API</p></div>
-                  </div>
-                </div> */}
+              
               </div>
             </div>
 

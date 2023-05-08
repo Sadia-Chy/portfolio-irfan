@@ -57,12 +57,12 @@ export default function Portfolio() {
 
   return (
     <>
-      <div class="  bg-zinc-800 w-full h-screen pb-16">
+      <div class="  bg-zinc-800 w-full h-full pb-40">
           <div class="grid grid-cols-3">
           <Button onClick={toggleDrawer} class="relative top-9 left-11 w-14 h-14 bg-zinc-700 border border-transparent rounded-full" >
             <MenuIcon fontSize="large" color="action" style={{ color: 'white',padding:'8px' }} />
           </Button> 
-          <div class="mt-16 justify-self-center text-zinc-100 text-6xl font-sans font-extrabold ">
+          <div class="mt-16 justify-self-center text-zinc-100 text-lg lg:text-4xl md:text-3xl sm:text-2xl  font-sans font-extrabold ">
             <p>MY <span class="text-yellow-400">PORTFOLIO</span></p>
           </div>
           <Drawer open={isOpen} 
@@ -86,10 +86,10 @@ export default function Portfolio() {
             </div>
 
 
-            <div class="grid justify-center font-sans font-medium text-zinc-100 mt-6">A FEW RECENT DESIGN AND CODING PROJECTS. WANT TO SEE MORE? EMAIL ME.</div>
+            <div class="grid justify-center ml-4 mr-4 sm:ml-0 sm:mr-0 sm:justify-center  font-sans font-medium text-zinc-100 mt-6">A FEW RECENT DESIGN AND CODING PROJECTS. WANT TO SEE MORE? EMAIL ME.</div>
 
             {/* <div class="grif grid-cols-3 mt-10"> */}
-            <div Class="grid grid-cols-3  gap-y-12 justify-items-center mt-11 ml-56 mr-56">
+            <div Class="grid sm:grid-cols-1 lg:grid-cols-3 gap-y-12 gap-x-12 lg:gap-x-12 justify-items-center mt-11 xl:ml-56 xl:mr-56">
                 {Portfolio1.portfolio.data.map((item)=>{
                   return(
                     <>
@@ -118,7 +118,7 @@ export default function Portfolio() {
                     direction='right' 
                     overlayOpacity="0.7"
                     overlayColor="black"
-                    style={{backgroundColor:'rgb(63,63,70)',width:"850px"}}>
+                    style={{backgroundColor:'rgb(63,63,70)',width:"450px"}}>
                       <Button
                       style={{color:"white",float:"right",marginTop:"10px",marginRight:"10px"}}
                       onClick={() => toggleDrawerModal(null)}

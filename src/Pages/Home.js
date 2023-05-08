@@ -57,16 +57,16 @@ export default function Home(){
   
   return (
     <>
-      <div class="grid grid-cols-2  bg-gradient-to-l from-black via-gray-900 to-gray-800 w-full h-screen">
-        <div class="grid grid-cols-2  place-items-start">
-           <Button onClick={toggleDrawer} class="relative top-9 left-11 w-14 h-14 bg-zinc-700 border border-transparent rounded-full" >
+      <div class="grid sm:grid-cols-1 md:grid-cols-2  bg-gradient-to-l from-black via-gray-900 to-gray-800 w-full h-screen">
+        <div class="grid sm:place-items-baseline md:grid-cols-2  md:place-items-start">
+           <Button onClick={toggleDrawer} class="relative sm:top-3 sm:left-8 md:top-9 md:left-11 w-14 h-14 bg-zinc-700 border border-transparent rounded-full" >
             <MenuIcon fontSize="large" color="action" style={{ color: 'white',padding:'8px' }} />
           </Button> 
-          <img class="w-80 h-50 mr-20 mt-52 border rounded-full" src={image} />
+          <img class="sm:relative sm:w-80 sm:h-50 sm:mr-20 sm:top-3 sm:left-44 sm:mt-0 md:top-9 md:left-0 lg:top-0 lg:left-0 md:mt-52  border rounded-full" src={image} />
         </div>
-        <div class="grid grid-cols-1 content-center space-y-3">
-              <div class="text-stone-50 text-xl">HI THERE !</div>
-              <div class="text-stone-50 text-4xl flex flex-row"><p>I'AM </p> 
+        <div class="grid grid-cols-1 space-y-3 ml-7 sm:grid-cols-1 content-center sm:space-y-3 lg:space-y-3 md:space-y-1 sm:ml-7">
+              <div class="text-stone-50 sm:text-xl lg:text-xl md:text-lg">HI THERE !</div>
+              <div class="text-stone-50 sm:text-4xl lg:text-4xl md:text-2xl flex flex-row"><p>I'AM </p> 
                 
                 {/* <p class="text-yellow-400 ml-2 transition-all"> {newName}</p> */}
                 <p class="text-yellow-400 ml-2">SOFTWARE ENGINEER</p>
@@ -79,19 +79,18 @@ export default function Home(){
               </p>
               <div class="flex flex-row space-x-8 py-4">
                   <Button class="flex flex-row border rounded-3xl
-                   bg-yellow-400 text-zinc-50 px-8 
-                   py-2 font-sans text-lg  hover:bg-gray-500"
+                   bg-yellow-400 text-zinc-50 sm:px-8 sm:py-2 lg:px-8 lg:py-2 md:px-4 md:py-2 font-sans sm:text-lg lg:text-lg md:text-xs hover:bg-gray-500"
                   onClick={aboutHandler}
                   disableRipple>
-                    <PermIdentityOutlinedIcon/><p class="px-2">MORE ABOUT ME</p>
+                    <PermIdentityOutlinedIcon/><p class="sm:px-2 lg:px-2 md:px-1 md:mt-1 lg:mt-0">MORE ABOUT ME</p>
                   </Button>
 
                   <Button class="bg-transparent 
                     border rounded-3xl flex flex-row
-                  border-yellow-400 text-yellow-400 px-9 py-2 font-sans text-lg  hover:bg-yellow-500 duration-300s hover:text-zinc-50 duration-300s"
+                  border-yellow-400 text-yellow-400 sm:px-8 sm:py-2 lg:px-8 lg:py-2 md:px-4 md:py-2 font-sans sm:text-lg lg:text-lg md:text-xs  hover:bg-yellow-500 duration-300s hover:text-zinc-50 duration-300s"
                   disableRipple
                   onClick={portfolioHandler}>
-                    <BusinessCenterOutlinedIcon/><p class="px-2">PORTFOLIO</p>
+                    <BusinessCenterOutlinedIcon/><p class="sm:px-2 lg:px-2 md:px-1 md:mt-1 lg:mt-0">PORTFOLIO</p>
                       
                   </Button>
                   
