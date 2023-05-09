@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import { useState,useEffect,useCallback } from 'react';
-import { CSSTransition, SwitchTransition } from "react-transition-group";
+import { useState } from 'react';
 import image from './images.jpg'
 import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
 import HomeIcon from '@mui/icons-material/Home';
@@ -20,10 +19,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-import { motion } from "framer-motion";
 import Obj from './skill.json'
 
-import Header from '../Component/Header'
 export default function About() {
   const [isOpen, setIsOpen] = useState(false)
     const toggleDrawer = () => {
@@ -44,14 +41,7 @@ export default function About() {
       Navigate("/contact")
     }
   return (
-    <>
-    {/* <motion.div
-      className="container text-center  bg-black"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
-    > */}
+    
       <div class="  bg-zinc-800 w-full h-fit ">
           <div class="grid grid-cols-1">
           <Button onClick={toggleDrawer} class="fixed top-9 left-11 w-14 h-14 bg-zinc-700 border border-transparent rounded-full" >
@@ -101,7 +91,7 @@ export default function About() {
                     {/* <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Country</p><p> Bangladesh</p></div> */}
                   </div>
                 </div>
-                <img src={image} class="sm:h-40 sm:w-40 lg:h-80 lg:w-80 rounded-full shadow-md shadow-yellow-400 sm:mr-5 lg:mr-40" />
+                <img src={image} alt={"img"} class="sm:h-40 sm:w-40 lg:h-80 lg:w-80 rounded-full shadow-md shadow-yellow-400 sm:mr-5 lg:mr-40" />
                 {/* <div></div> */}
                 {/* <p class="border-4 border-yellow-400 h-10">hshash</p> */}
             </div>
@@ -168,6 +158,7 @@ export default function About() {
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 sm:ml-10 lg:ml-10 text-zinc-50">
                 {
                   Object.keys(Obj).map(key =>{
+                    // eslint-disable-next-line
                     {/* console.log(key) */}
                     return(
                       <div>
@@ -176,10 +167,12 @@ export default function About() {
                           {key}
                         </Typography>
                         {
-                          Obj[key].map(item => {
+                          Obj[key].map((item, index) => {
                             return(
-                              <div class="flex flex-row text-md space-x-5 mt-4 px-9 "><PsychologyIcon style={{color:"yellow"}} /><p>{item}</p></div>
-                              // <span>{item}{", "}</span>
+                              <div key={index} class="flex flex-row text-md space-x-5 mt-4 px-9 ">
+                                <PsychologyIcon style={{color:"yellow"}} />
+                                <p>{item}</p>
+                              </div>
                             )
                           })
                         }
@@ -193,8 +186,7 @@ export default function About() {
             </div>
 
       </div>
-      {/* </motion.div> */}
-    </>
+      
   );
 }
 

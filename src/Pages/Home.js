@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import { useState,useEffect,useCallback } from 'react';
-import { CSSTransition, SwitchTransition } from "react-transition-group";
 import image from './images.jpg'
 import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
 import HomeIcon from '@mui/icons-material/Home';
@@ -24,12 +23,14 @@ export default function Home(){
     'A Software Engineer', 'A Graphic Designer', 'A MERN Stack Developer'
 ]
 
+    // eslint-disable-next-line
     const [newName, setnewName] = useState("");
     const Navigate = useNavigate()
 
     const shuffle = useCallback(() => {
         const index = Math.floor(Math.random() * names.length);
         setnewName(names[index]);
+         // eslint-disable-next-line
     }, []);
 
     useEffect(() => {
@@ -52,9 +53,6 @@ export default function Home(){
       Navigate("/contact")
     }
 
-    const [age, setAge] = React.useState('');
-
-  
   return (
     <>
       <div class="grid sm:grid-cols-1 md:grid-cols-2  bg-gradient-to-l from-black via-gray-900 to-gray-800 w-full h-screen">
@@ -62,7 +60,7 @@ export default function Home(){
            <Button onClick={toggleDrawer} class="relative sm:top-3 sm:left-8 md:top-9 md:left-11 w-14 h-14 bg-zinc-700 border border-transparent rounded-full" >
             <MenuIcon fontSize="large" color="action" style={{ color: 'white',padding:'8px' }} />
           </Button> 
-          <img class="sm:relative sm:w-80 sm:h-50 sm:mr-20 sm:top-3 sm:left-44 sm:mt-0 md:top-9 md:left-0 lg:top-0 lg:left-0 md:mt-52  border rounded-full" src={image} />
+          <img class="sm:relative sm:w-80 sm:h-50 sm:mr-20 sm:top-3 sm:left-44 sm:mt-0 md:top-9 md:left-0 lg:top-0 lg:left-0 md:mt-52  border rounded-full" src={image} alt="img"/>
         </div>
         <div class="grid grid-cols-1 space-y-3 ml-7 sm:grid-cols-1 content-center sm:space-y-3 lg:space-y-3 md:space-y-1 sm:ml-7">
               <div class="text-stone-50 sm:text-xl lg:text-xl md:text-lg">HI THERE !</div>

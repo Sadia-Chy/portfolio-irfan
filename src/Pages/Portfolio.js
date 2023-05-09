@@ -1,8 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import { useState,useEffect,useCallback } from 'react';
-import { CSSTransition, SwitchTransition } from "react-transition-group";
-import image from './images.jpg'
+import { useState} from 'react';
 import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
 import HomeIcon from '@mui/icons-material/Home';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
@@ -10,14 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
-import PsychologyIcon from '@mui/icons-material/Psychology';
-import Link from '@mui/material/Link';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { Typography, duration } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Portfolio1 from './portfolio.json'
 
@@ -50,10 +41,6 @@ export default function Portfolio() {
       Navigate("/contact")
     }
 
-    const styles={
-
-      // backgroundImage:{image}
-    }
 
   return (
     <>
@@ -103,7 +90,7 @@ export default function Portfolio() {
                   <Button class="w-80" disableRipple onClick={()=>{
                     toggleDrawerModal(item)
                     }}
-                  ><img  class="h-44 w-80 transition-color group-hover:opacity-0 duration-500" src={item.image} />
+                  ><img  class="h-44 w-80 transition-color group-hover:opacity-0 duration-500" src={item.image} alt="img"/>
                   </Button>
                   </div>
                     </>
@@ -124,7 +111,7 @@ export default function Portfolio() {
                       onClick={() => toggleDrawerModal(null)}
                       ><CloseIcon /></Button>
                       <div class="flex flex-col space-y-2 mt-12 ml-16">
-                      <img style={{width:"700px",borderRadius:"8px"}} src={selectedItem?.image}/>
+                      <img style={{width:"700px",borderRadius:"8px"}} src={selectedItem?.image} alt="img"/>
                       <div class="text-4xl text-yellow-500 font-semibold">{ selectedItem?.name }</div>
                       <div class="p-1 text-zinc-50 text-lg">{ selectedItem?.description }</div>
                       <div class="w-32 flex justify-center bg-yellow-500 rounded-3xl"><Button class="p-2 text-lg text-zinc-100">Preview</Button></div>

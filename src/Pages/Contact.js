@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import { useState,useEffect,useCallback } from 'react';
+import { useState} from 'react';
 import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
 import HomeIcon from '@mui/icons-material/Home';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
@@ -8,19 +8,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import MailIcon from '@mui/icons-material/Mail';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import PsychologyIcon from '@mui/icons-material/Psychology';
-import Link from '@mui/material/Link';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { Typography, duration } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 export default function Contact() {
@@ -38,9 +31,6 @@ export default function Contact() {
     }
     const portfolioHandler =()=>{
       Navigate("/portfolio")
-    }
-    const contactHandler =()=>{
-      Navigate("/contact")
     }
 
   return (
