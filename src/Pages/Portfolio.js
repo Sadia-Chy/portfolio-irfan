@@ -46,10 +46,10 @@ export default function Portfolio() {
     <>
       <div class="  bg-zinc-800 w-full h-full pb-40">
           <div class="grid grid-cols-3">
-          <Button onClick={toggleDrawer} class="relative top-9 left-11 w-14 h-14 bg-zinc-700 border border-transparent rounded-full" >
+          <Button onClick={toggleDrawer} class="relative xxs:top-5 xxs:left-5 xs:top-5 xs:left-5 sm:top-9 sm:left-11 w-14 h-14 bg-zinc-700 border border-transparent rounded-full" >
             <MenuIcon fontSize="large" color="action" style={{ color: 'white',padding:'8px' }} />
           </Button> 
-          <div class="mt-16 justify-self-center text-zinc-100 text-lg xs:text-base lg:text-4xl md:text-3xl sm:text-2xl  font-sans font-extrabold ">
+          <div class="mt-16 justify-self-center text-zinc-100 text-lg xxs:text-sm xs:text-base lg:text-4xl md:text-3xl sm:text-2xl  font-sans font-extrabold ">
             <p>MY <span class="text-yellow-400">PORTFOLIO</span></p>
           </div>
           <Drawer open={isOpen} 
@@ -105,13 +105,13 @@ export default function Portfolio() {
                     direction='right' 
                     overlayOpacity="0.7"
                     overlayColor="black"
-                    style={{backgroundColor:'rgb(63,63,70)',width:"400px"}}>
+                    style={{backgroundColor:'rgb(63,63,70)',width:"350px"}}>
                       <Button
                       style={{color:"white",float:"right",marginTop:"10px",marginRight:"10px"}}
                       onClick={() => toggleDrawerModal(null)}
                       ><CloseIcon /></Button>
-                      <div class="flex flex-col space-y-2 mt-12 xs:ml-5 xs:mr-6 sm:ml-16">
-                      <img style={{width:"700px",borderRadius:"8px"}} src={selectedItem?.image} alt="img"/>
+                      <div class="flex flex-col space-y-2 mt-12 xxs:ml-4 xxs:mr-4 xs:ml-5 xs:mr-6 sm:ml-6">
+                      <img style={{width:"800px",borderRadius:"8px"}} src={selectedItem?.image} alt="img"/>
                       <div class="text-4xl text-yellow-500 font-semibold">{ selectedItem?.name }</div>
                       <div class="p-1 text-zinc-50 text-lg">{ selectedItem?.description }</div>
                       <div class="w-32 flex justify-center bg-yellow-500 rounded-3xl"><Button class="p-2 text-lg text-zinc-100">Preview</Button></div>
