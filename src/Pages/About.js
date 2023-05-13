@@ -47,7 +47,7 @@ export default function About() {
           <Button onClick={toggleDrawer} class="fixed top-9 left-11 w-14 h-14 bg-zinc-700 border border-transparent rounded-full" >
             <MenuIcon fontSize="large" color="action" style={{ color: 'white',padding:'8px' }} />
           </Button> 
-          <div class="mt-16  justify-self-center text-zinc-100 sm:text-4xl md:text-5xl lg:text-6xl font-sans font-extrabold ">
+          <div class="mt-16  justify-self-center text-zinc-100 xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-extrabold ">
             <p>ABOUT <span class="text-yellow-400">ME</span></p>
           </div>
           <Drawer open={isOpen} 
@@ -74,16 +74,16 @@ export default function About() {
             <div class="grid justify-center font-sans font-medium text-zinc-100 mt-6">I LOVE TO CODE</div>
             
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-2 place-items-center mt-9">
-                <div class="grid sm:grid-cols-1 lg:grid-cols-2 border border-transparent border-r-yellow-400 h-64 w-full text-zinc-100" style={{}}>
-                  <div class="ml-10">
+            <div class="grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 place-items-center mt-9">
+                <div class="grid sm:grid-cols-1 lg:grid-cols-2 border border-transparent sm:border-r-yellow-400 sm:h-64 w-full text-zinc-100" style={{}}>
+                  <div class="ml-10 xs:ml-5 sm:ml-10">
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Full Name</p><p> Irfan Uddin</p></div>
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Birthdate</p><p> 19 june 1995</p></div>
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Nationality</p><p> Bangladeshi</p></div>
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Experience</p><p> 7 years</p></div>
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Country</p><p> Bangladesh</p></div>
                   </div>
-                  <div class="sm:ml-10 lg:ml-0">
+                  <div class="xs:ml-5 sm:ml-10 lg:ml-0">
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Email </p><p> IrfanUddin@gmail.com</p></div>
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Phone</p><p> +8001625166755</p></div>
                       <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>LinkedIn</p><Link color="inherit" href="https://www.linkedin.com/in/irfan-sabbir/"> <LinkedInIcon/></Link></div>
@@ -91,13 +91,13 @@ export default function About() {
                     {/* <div class="flex flex-row text-md space-x-5 mt-4 px-9"><FiberManualRecordIcon/><p>Country</p><p> Bangladesh</p></div> */}
                   </div>
                 </div>
-                <img src={image} alt={"img"} class="sm:h-40 sm:w-40 lg:h-80 lg:w-80 rounded-full shadow-md shadow-yellow-400 sm:mr-5 lg:mr-40" />
+                <img src={image} alt={"img"} class="xs:h-0 xs:w-0 sm:h-40 sm:w-40 lg:h-80 lg:w-80 rounded-full shadow-md shadow-yellow-400 sm:mr-5 lg:mr-40" />
                 {/* <div></div> */}
                 {/* <p class="border-4 border-yellow-400 h-10">hshash</p> */}
             </div>
 
 
-            <div class="grid grid-cols-2 border border-transparent border-t-zinc-300 sm:mt-60 lg:mt-24 ml-24 mr-24">
+            <div class="grid xs:grid-cols-1 sm:grid-cols-2 border border-transparent border-t-zinc-300 xs:mt-14 sm:mt-60 lg:mt-24 xs:ml-12 sm:ml-24 mr-24">
               <div class="lg:ml-6 mb-8">
                 <Typography variant='h6' style={{color:"white" ,marginTop:"20px"}}>
                   EXPERIENCE
@@ -124,7 +124,7 @@ export default function About() {
                       <div ><div class="flex flex-row space-x-2 text-gray-400">
                         <CalendarMonthIcon/><p>Sep 2022 - Present</p>
                       </div>
-                      <div class="flex flex-row space-x-4">
+                      <div class="flex flex-row sm:space-x-4">
                       <p class="text-zinc-50">Full Stack Developer -</p>
                       <p class="text-zinc-50 font-mono font-bold">Venturas Limited</p>
                       </div></div>
@@ -141,7 +141,7 @@ export default function About() {
                       <div class="flex flex-row space-x-2 text-gray-400">
                         <CalendarMonthIcon/><p>2017 - 2021</p>
                       </div>
-                      <div class="flex flex-row space-x-4">
+                      <div class="flex  flex-row xs:space-x-10 sm:space-x-4">
                       <p class="text-zinc-50">Bachelor's In Computer Science -</p>
                       <p class="text-zinc-50 font-mono font-bold">Premier University</p>
                       </div>
@@ -150,8 +150,8 @@ export default function About() {
               </div>
             </div>
 
-            <div class="border border-transparent border-t-zinc-300 ml-24 mr-24">
-              <div class="ml-6 mb-48">
+            <div class="border border-transparent border-t-zinc-300 xs:mt-8 xs:ml-10 sm:ml-24 mr-24">
+              <div class=" xs:ml-3 sm:ml-6 mb-48">
                 <Typography variant="h6" style={{color:"white",marginTop:"20px"}}>
                   SKILLS
                 </Typography>

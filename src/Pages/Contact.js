@@ -40,7 +40,7 @@ export default function Contact() {
           <Button onClick={toggleDrawer} class="relative top-9 left-11 w-14 h-14 bg-zinc-700 border border-transparent rounded-full" >
             <MenuIcon fontSize="large" color="action" style={{ color: 'white',padding:'8px' }} />
           </Button> 
-          <div class="mt-16 justify-self-center text-zinc-100 sm:text-3xl lg:text-5xl font-sans font-extrabold ">
+          <div class="mt-16 justify-self-center text-zinc-100 xs:text-lg sm:text-3xl lg:text-5xl font-sans font-extrabold ">
             <p>GET <span class="text-yellow-400">IN TOUCH</span></p>
           </div>
           <Drawer open={isOpen} 
@@ -64,7 +64,7 @@ export default function Contact() {
             </div>
 
 
-            <div class="grid justify-center font-sans font-medium text-zinc-100 mt-6">I’M ALWAYS OPEN TO DISCUSSING PRODUCT DESIGN WORK OR PARTNERSHIPS.</div>
+            <div class="grid justify-center font-sans font-medium text-zinc-100 xs:ml-3 mt-6">I’M ALWAYS OPEN TO DISCUSSING PRODUCT DESIGN WORK OR PARTNERSHIPS.</div>
             
             <div class="grid sm:grid-cols-3 lg:grid-cols-3 mt-6 p-16">
               <div class=" ">
